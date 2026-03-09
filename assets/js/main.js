@@ -174,20 +174,20 @@ async function sendVisitNotification() {
         // Stop if already notified in this session
         if (sessionStorage.getItem('visit_notified')) return;
 
-        const ipData = await fetch("https://ipapi.co/json/");
-        const data = await ipData.json();
+        const ipResponse = await fetch("https://ipapi.co/json/");
+        if (!ipResponse.ok) throw new Error("IP API unreachable");
+        const data = await ipResponse.json();
 
-        emailjs.send("service_y4r1pxo", "template_gp8y77k", {
-            visitor_ip: data.ip,
-            visitor_city: data.city,
-            visitor_country: data.country_name,
-            visitor_region: data.region,
-            visitor_org: data.org
-        })
-            .then(() => {
-                console.log("Visit alert sent!");
-                sessionStorage.setItem('visit_notified', 'true');
-            });
+        await emailjs.send("service_y4r1pxo", "template_gp8y77k", {
+            visitor_ip: data.ip || "Unknown",
+            visitor_city: data.city || "Unknown",
+            visitor_country: data.country_name || "Unknown",
+            visitor_region: data.region || "Unknown",
+            visitor_org: data.org || "Unknown"
+        });
+
+        console.log("Visit alert sent!");
+        sessionStorage.setItem('visit_notified', 'true');
 
     } catch (e) {
         console.error('Tracking system error:', e);
@@ -209,18 +209,24 @@ if (contactForm) {
         btn.disabled = true;
 
         try {
-            const ipData = await fetch("https://ipapi.co/json/");
-            const data = await ipData.json();
-
-            // Send main contact form
+            // Send main contact form FIRST so it definitely goes through
             await emailjs.sendForm("service_y4r1pxo", "template_zgz0g1c", this);
 
-            // Send secondary IP notification using the visit template as requested in the snippet
-            await emailjs.send("service_y4r1pxo", "template_gp8y77k", {
-                visitor_ip: data.ip,
-                visitor_city: data.city,
-                visitor_country: data.country_name
-            });
+            // Fetch IP data in the background (don't let failure here block the success message)
+            try {
+                const ipData = await fetch("https://ipapi.co/json/");
+                const data = await ipData.json();
+
+                // Send secondary tracking notification
+                await emailjs.send("service_y4r1pxo", "template_gp8y77k", {
+                    visitor_ip: data.ip,
+                    visitor_city: data.city,
+                    visitor_country: data.country_name,
+                    visitor_name: contactForm.querySelector('[name="user_name"]').value
+                });
+            } catch (ipErr) {
+                console.warn("IP Tracking failed, but message was sent.", ipErr);
+            }
 
             if (status) {
                 status.innerHTML = '<span style="color: #10b981;">Message sent successfully!</span>';
@@ -229,9 +235,10 @@ if (contactForm) {
             }
             contactForm.reset();
         } catch (err) {
-            console.error("EmailJS Error:", err);
+            console.error("EmailJS Error details:", err);
             if (status) {
-                status.innerHTML = '<span style="color: #ef4444;">Error sending message. Please try again.</span>';
+                const errorMsg = err.text || err.message || "Please check your EmailJS dashboard settings.";
+                status.innerHTML = `<span style="color: #ef4444;">Error: ${errorMsg}</span>`;
             }
         } finally {
             btn.disabled = false;
