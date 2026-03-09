@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Abdul Rehman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("E9IkrYo8s2nqwsS7R");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpeg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <h2 class="page-title"><span class="gradient-text">My Projects</span></h2>
+        <p class="page-subtitle">A showcase of my diverse technical portfolio</p>
+
+        <!-- 📊 DATA SCIENCE PROJECTS -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-chart-bar"
+                    style="color: #8b5cf6; filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.5));"></i> DATA SCIENCE
+                PROJECTS</h2>
+            <div class="grid-container">
+                <!-- 1. Credit Card Churn Prediction -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-credit-card"
+                            style="color: #3b82f6; filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));"></i></div>
+                    <h3>Credit Card Churn Prediction</h3>
+                    <p>ML model to identify customers likely to leave banking services.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Churn risk classification</li>
+                                <li>Feature engineering</li>
+                                <li>High-accuracy ML models</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Improved churn recall from 24% to
+                                87%, significantly reducing customer attrition.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, Machine Learning,
+                                SQL</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. Cash Demand Forecasting -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-university"
+                            style="color: #0ea5e9; filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.5));"></i></div>
+                    <h3>Cash Demand Forecasting</h3>
+                    <p>AI-driven system to forecast cash requirements across bank branches.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Multi-variate time-series modeling</li>
+                                <li>Seasonal & holiday impact analysis</li>
+                                <li>Automated replenishment scheduling</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Reduced idle cash by 25% across
+                                500+ branches, optimizing liquidity while maintaining service levels.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, Prophet, XGBoost,
+                                Time Series</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. Cash Optimization System -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-money-bill-wave"
+                            style="color: #14b8a6; filter: drop-shadow(0 0 8px rgba(20, 184, 166, 0.5));"></i></div>
+                    <h3>Cash Optimization System</h3>
+                    <p>ATM cash forecasting system to reduce shortages and operational costs.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Demand forecasting per ATM using historical</li>
+                                <li>Dynamic cash replenishment scheduling</li>
+                                <li>Cost optimization analysis</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Saved PKR 124M through AI-driven
+                                cash management and shortage reduction. Reduced ATM cash-out incidents.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Prophet, Time Series,
+                                MLOps</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4. Property-Profit-Maximizer (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-home"
+                            style="color: #6366f1; filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));"></i></div>
+                    <h3>Property-Profit-Maximizer</h3>
+                    <p>AI solution to predict real estate prices for smarter investments.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Multi-dimensional feature engineering</li>
+                                <li>Advanced regression modeling</li>
+                                <li>Investment yield projections</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Achieved 88% valuation accuracy
+                                across key urban markets, enabling data-driven acquisition strategies.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, Scikit-learn,
+                                XGBoost</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 5. Customer Segmentation (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-users"
+                            style="color: #10b981; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));"></i></div>
+                    <h3>Customer Segmentation</h3>
+                    <p>Customer behavior analysis for targeted marketing and retention strategies.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>RFM-based customer profiling</li>
+                                <li>Clustering for segmentation</li>
+                                <li>Marketing strategy insights</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Achieved 20% increase in marketing
+                                ROI through precision behavior targeting.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, RFM Analysis,
+                                Clustering</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 6. Stock Price Prediction (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-chart-line"
+                            style="color: #f59e0b; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));"></i></div>
+                    <h3>Stock Price Prediction</h3>
+                    <p>Time-series forecasting system for stock markets to analyze trends.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>ARIMA, SARIMA modeling</li>
+                                <li>Trend and seasonality analysis</li>
+                                <li>Noise handling in volatile data</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">92% accuracy in trend direction
+                                forecasting, enabling better risk assessment.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, ARIMA, Time
+                                Series</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn" onclick="toggleProjects(this)">View More</button>
+            </div>
+        </section>
+
+        <!-- 👁️ COMPUTER VISION PROJECTS -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-eye"
+                    style="color: #10b981; filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.5));"></i> COMPUTER VISION
+                PROJECTS</h2>
+            <div class="grid-container">
+                <!-- 1. Steel Detection -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-microchip"
+                            style="color: #06b6d4; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.5));"></i></div>
+                    <h3>Steel Detection</h3>
+                    <p>Automated system to detect and categorize defects in steel surfaces with high precision.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>CNN-based defect classification</li>
+                                <li>92% detection accuracy</li>
+                                <li>Real-time industrial inspection support</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Achieved 92% defect detection
+                                accuracy, drastically reducing manual inspection time. Improved product quality through
+                                early defect identification</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">PyTorch, Computer Vision,
+                                CNN</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. Visual Content Recommendation Engine -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-images"
+                            style="color: #ec4899; filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.5));"></i></div>
+                    <h3>Visual Content Recommendation Engine</h3>
+                    <p>AI system that recommends content based on visual similarity and aesthetic features.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Feature extraction using deep CNNs</li>
+                                <li>Visual similarity-based ranking</li>
+                                <li>Scalable search in vector space</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Generated 30% higher engagement by
+                                delivering visually relevant content in real-time.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Python, ResNet, Vector
+                                Database</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. Real-Time Object Detection & Segmentation -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-search-plus"
+                            style="color: #ef4444; filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.5));"></i></div>
+                    <h3>Real-Time Object Detection & Segmentation</h3>
+                    <p>Advanced system for simultaneous identification and pixel-level segmentation of objects.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Real-time object detection </li>
+                                <li>Multi-class detection </li>
+                                <li>Optimized inference for live video streams</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Enabled accurate visual
+                                understanding for real-time systems, reducing manual monitoring through automated
+                                detection.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">PyTorch, YOLO, OpenCV,
+                                Computer Vision</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 🤖 AGENTIC AI / GENERATIVE AI PROJECTS -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-robot"
+                    style="color: #f59e0b; filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));"></i> AGENTIC AI /
+                GENERATIVE AI PROJECTS</h2>
+            <div class="grid-container">
+                <!-- 1. LLM Judge & Agentic RAG System -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-gavel"
+                            style="color: #a855f7; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));"></i></div>
+                    <h3>LLM Judge & Agentic RAG System</h3>
+                    <p>Scalable LLM system for evaluating customer support conversations.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>LLM Judge across 17 quality criteria</li>
+                                <li>Agentic RAG for deep analysis</li>
+                                <li>50K+ conversations weekly</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Improved evaluation accuracy by
+                                +10% and reduced inference latency to ~100ms.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">LLM Judge, RAG, Qwen</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. Medical Chat Bot (RAG) -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-user-md"
+                            style="color: #10b981; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));"></i></div>
+                    <h3>Medical Chat Bot (RAG)</h3>
+                    <p>Healthcare chatbot using hybrid search for accurate answers.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>RAG-based medical QA</li>
+                                <li>Hybrid vector search</li>
+                                <li>Safe answer generation</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Achieved 95% relevant answer rate,
+                                significantly streamlining preliminary medical inquiry handling.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">RAG, LangChain,
+                                Pinecone</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. Query Router & SLM Fine-Tuning -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-project-diagram"
+                            style="color: #38bdf8; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));"></i></div>
+                    <h3>Query Router & SLM Fine-Tuning</h3>
+                    <p>High-performance intent classification and hybrid retrieval system.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Finetuned Qwen-2.5-0.6B </li>
+                                <li>Optimized inference</li>
+                                <li>Finetuned Sentence Transformer</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Enabled routing for 50K+ daily
+                                queries, outperformed GPT-4.1 by 16.45%, and reduced latency to ~100ms.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">PyTorch, Transformers, Qwen,
+                                Sentence Transformers, MLOps</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4. Startups Query Agent (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-search-dollar"
+                            style="color: #eab308; filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.5));"></i></div>
+                    <h3>Startups Query Agent</h3>
+                    <p>AI agent converting natural language into SQL queries.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>NL to SQL conversion</li>
+                                <li>Automated data querying</li>
+                                <li>LLM-powered reasoning</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Achieved 98% accuracy in NL-to-SQL
+                                conversion, saving hours of manual data extraction weekly.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">LLaMA, LangChain, SQL</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 5. Mental Health Advocacy (RAG) (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-headset"
+                            style="color: #8b5cf6; filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));"></i></div>
+                    <h3>Mental Health Advocacy (RAG)</h3>
+                    <p>AI chatbot supporting Urdu speakers with mental health guidance.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Speech-to-text & text-to-speech</li>
+                                <li>Empathetic LLM responses</li>
+                                <li>Secure backend system</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Empowered 1000+ Urdu speakers with
+                                immediate, empathetic, and safe mental health guidance.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">FastAPI, Docker, RAG</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 6. Multi-PDF Chat (Agentic RAG) (Hidden) -->
+                <div class="content-card hidden-project">
+                    <div class="card-icon"><i class="fas fa-file-pdf"
+                            style="color: #f43f5e; filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.5));"></i></div>
+                    <h3>Multi-PDF Chat (Agentic RAG)</h3>
+                    <p>Chat system to analyze and compare multiple PDFs.</p>
+
+                    <div class="project-details">
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Key Features:</strong></p>
+                            <ul class="skills-list" style="margin-top: 5px;">
+                                <li>Agentic document understanding</li>
+                                <li>Multi-PDF querying</li>
+                                <li>Citation-based answers</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; width: 100%;">
+                            <p><strong>Business Impact:</strong></p>
+                            <p style="color: var(--text-secondary); margin-top: 5px;">Reduced manual document comparison
+                                time by 70% through automated semantic cross-referencing.</p>
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <p><strong>Technologies:</strong></p>
+                            <span style="font-size: 0.85rem; color: var(--text-highlight);">Agentic AI, Weaviate,
+                                RAG</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn" onclick="toggleProjects(this)">View More</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABOUT ME</h3>
+                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                        specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
+                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PROFESSIONAL LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GET IN TOUCH</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email
+                                Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

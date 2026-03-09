@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Abdul Rehman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("E9IkrYo8s2nqwsS7R"); // Replace with your Public Key
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpeg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <h2 class="page-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="page-subtitle">I'm always open to discussing new projects and opportunities.</p>
+
+        <div class="contact-info-grid">
+
+            <!-- Phone -->
+            <a href="tel:+923460842762" class="contact-info-card" style="text-decoration: none; display: block;">
+                <i class="fas fa-phone-alt"
+                    style="color: #06b6d4; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.6));"></i>
+                <h3>Contact Phone Number</h3>
+                <p>+92 346 0842762</p>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:a4rehman.ai@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-info-card"
+                style="text-decoration: none; display: block;">
+                <i class="fas fa-envelope"
+                    style="color: #ec4899; filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.6));"></i>
+                <h3>Email Address</h3>
+                <p>a4rehman.ai@gmail.com</p>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" class="contact-info-card"
+                style="text-decoration: none; display: block;">
+                <i class="fab fa-linkedin"
+                    style="color: #0077b5; filter: drop-shadow(0 0 10px rgba(0, 119, 181, 0.6));"></i>
+                <h3>LinkedIn Profile</h3>
+                <p>View Profile</p>
+            </a>
+
+        </div>
+
+        <!-- Professional Contact Form -->
+        <div class="content-card" style="max-width: 800px; padding: 40px;">
+            <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Send a <span
+                    class="gradient-text">Message</span></h3>
+            <form id="contact-form" class="custom-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label for="name" style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Full
+                            Name</label>
+                        <input type="text" id="name" name="user_name" placeholder="John Doe" required
+                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid #333; border-radius: 8px; color: white;">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Email
+                            Address</label>
+                        <input type="email" id="email" name="user_email" placeholder="john@example.com" required
+                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid #333; border-radius: 8px; color: white;">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="message" style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Your
+                        Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required
+                        style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid #333; border-radius: 8px; color: white; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="view-more-btn" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                    Send Message <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                </button>
+                <div id="form-status" style="margin-top: 20px; text-align: center; display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABOUT ME</h3>
+                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                        specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
+                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PROFESSIONAL LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GET IN TOUCH</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email
+                                Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Abdul Rehman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("E9IkrYo8s2nqwsS7R");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpeg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <h1 class="page-title"><span class="gradient-text">Resume</span></h1>
+        <p class="page-subtitle">AI Engineer | LLM & Agentic Systems</p>
+
+        <p
+            style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 40px; line-height: 1.8;">
+            Deeply technical Data Scientist with a focus on building production-grade AI applications and LLM systems
+            that drive measurable business value.
+        </p>
+
+        <!-- Resume Contact Information Bar -->
+        <div class="resume-contact-bar">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pakistan</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>+92 346 0842762</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:a4rehman.ai@gmail.com">a4rehman.ai@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/a4rehman" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="resume-actions">
+            <a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                download="Abdul_Rehman_AI_Engineer_Resume.pdf" class="resume-btn-primary">
+                <i class="fas fa-download"></i> Download Resume (PDF)
+            </a>
+            <a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" class="resume-btn-secondary">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="contact.html" class="resume-btn-secondary">
+                <i class="fas fa-envelope"></i> Contact Me
+            </a>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABOUT ME</h3>
+                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                        specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
+                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PROFESSIONAL LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GET IN TOUCH</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email
+                                Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

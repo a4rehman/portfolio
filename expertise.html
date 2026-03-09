@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise | Abdul Rehman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("E9IkrYo8s2nqwsS7R");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpeg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="expertise.html" class="active">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <h2 class="page-title"><span class="gradient-text">My Expertise</span></h2>
+        <p class="page-subtitle">Deep dive into my technical capabilities</p>
+
+        <div class="grid-container expertise-grid">
+
+            <!-- Service 1 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-microchip"
+                        style="color: #3b82f6; filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));"></i></div>
+                <h3>AI-Driven Application Development</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Intelligent ML/DL applications</li>
+                    <li>NLP technologies implementation</li>
+                    <li>TensorFlow, PyTorch, Keras</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-chart-bar"
+                        style="color: #10b981; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));"></i></div>
+                <h3>Machine Learning Solutions</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Model design, training & deployment</li>
+                    <li>MLOps & CI/CD pipelines</li>
+                    <li>Seamless production usage</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-comments"
+                        style="color: #f59e0b; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));"></i></div>
+                <h3>Natural Language Processing (NLP)</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Insight extraction from text</li>
+                    <li>Hugging Face, LangChain, spaCy</li>
+                    <li>Chatbots & sentiment analysis</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-chart-pie"
+                        style="color: #ec4899; filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.5));"></i></div>
+                <h3>Data Analysis & Visualization</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Data insights & visualization</li>
+                    <li>Pandas, NumPy processing</li>
+                    <li>Matplotlib, Seaborn, Plotly</li>
+                    <li>SQL, Tableau, PowerBI</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-server"
+                        style="color: #06b6d4; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.5));"></i></div>
+                <h3>End-to-End MLOps & Deployment</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Docker & CI/CD pipelines optimization</li>
+                    <li>FastAPI model serving</li>
+                    <li>Production-grade integration</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-magic"
+                        style="color: #ef4444; filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.5));"></i></div>
+                <h3>Generative AI & Agentic AI</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>GenAI & Autonomous Agents</li>
+                    <li>LLMOps & Agentic RAG Systems</li>
+                    <li>LangChain, LangGraph, CrewAI</li>
+                </ul>
+            </div>
+
+            <!-- Service 7: Time Series Analysis -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-chart-line"
+                        style="color: #8b5cf6; filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));"></i></div>
+                <h3>Time Series Analysis</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Forecasting using ARIMA, SARIMA</li>
+                    <li>Trend,seasonality & anomaly detection</li>
+                    <li>Financial & business forecasting models</li>
+                </ul>
+            </div>
+
+            <!-- Service 8: Cloud Computing -->
+            <div class="content-card">
+                <div class="card-icon"><i class="fas fa-cloud"
+                        style="color: #f97316; filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.5));"></i></div>
+                <h3>Cloud Computing</h3>
+                <ul class="skills-list" style="margin-top: 10px; margin-bottom: 0;">
+                    <li>Cloud-based ML deployment & scaling</li>
+                    <li>AWS & GCP data/AI workloads</li>
+                    <li>Secure, production-ready architectures</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <h2 class="page-title"><span class="gradient-text">Skills</span></h2>
+        <p class="page-subtitle">Technologies I work with</p>
+
+        <div class="skills-grid">
+
+            <!-- Programming Languages & Tools -->
+            <div class="skill-card-compact color-prog">
+                <i class="fas fa-terminal"></i>
+                <h3>Programming Languages & Tools</h3>
+                <ul class="skills-list-compact">
+                    <li>Python, SQL</li>
+                    <li>Pandas, NumPy</li>
+                    <li>Scikit-learn</li>
+                </ul>
+            </div>
+
+            <!-- Machine Learning & AI -->
+            <div class="skill-card-compact color-ml">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning & AI</h3>
+                <ul class="skills-list-compact">
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Computer Vision, NLP</li>
+                    <li>Time Series</li>
+                </ul>
+            </div>
+
+            <!-- Generative AI & LLM Ops -->
+            <div class="skill-card-compact color-genai">
+                <i class="fas fa-magic"></i>
+                <h3>Generative AI & LLM Ops</h3>
+                <ul class="skills-list-compact">
+                    <li>RAG, Agentic AI</li>
+                    <li>LangChain</li>
+                    <li>Prompt Engineering</li>
+                    <li>LLM Fine-Tuning</li>
+                </ul>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card-compact color-db">
+                <i class="fas fa-database"></i>
+                <h3>Databases</h3>
+                <ul class="skills-list-compact">
+                    <li>PostgreSQL, MySQL</li>
+                    <li>Pinecone, Weaviate</li>
+                    <li>Milvus</li>
+                </ul>
+            </div>
+
+            <!-- Computer Vision -->
+            <div class="skill-card-compact color-cv">
+                <i class="fas fa-eye"></i>
+                <h3>Computer Vision</h3>
+                <ul class="skills-list-compact">
+                    <li>Image Classification</li>
+                    <li>Object Detection</li>
+                    <li>Face & Emotion Recognition</li>
+                </ul>
+            </div>
+
+            <!-- Agentic AI -->
+            <div class="skill-card-compact color-agent">
+                <i class="fas fa-robot"></i>
+                <h3>Agentic AI</h3>
+                <ul class="skills-list-compact">
+                    <li>Multi-Agent Systems</li>
+                    <li>Tool-Using Agents</li>
+                    <li>Workflow Orchestration</li>
+                </ul>
+            </div>
+
+            <!-- RAG Systems -->
+            <div class="skill-card-compact color-rag">
+                <i class="fas fa-search-plus"></i>
+                <h3>RAG Systems</h3>
+                <ul class="skills-list-compact">
+                    <li>Document Chunking</li>
+                    <li>Vector Search</li>
+                    <li>RAG Evaluation</li>
+                </ul>
+            </div>
+
+            <!-- MLOps & Deployment -->
+            <div class="skill-card-compact color-ops">
+                <i class="fas fa-rocket"></i>
+                <h3>MLOps & Deployment</h3>
+                <ul class="skills-list-compact">
+                    <li>CI/CD for ML</li>
+                    <li>Model Monitoring</li>
+                    <li>Inference Optimization</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Top Credentials Section -->
+        <div class="cert-category-section">
+            <h2 class="page-title"><span class="gradient-text">Top Professional Credentials</span></h2>
+            <p class="page-subtitle">Recognized certifications & badges</p>
+            <div class="cert-grid">
+                <!-- 1. Data Science -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-certificate cert-badge-icon" style="font-size: 2.2rem; color: #00A4EF;"></i>
+                    <h4>Microsoft Certified: Data Analyst Associate</h4>
+                    <p class="cert-issuer">Microsoft <span class="cert-year-inline">· 2023</span></p>
+                </div>
+                <!-- 2. Machine Learning -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-robot cert-badge-icon" style="font-size: 2.2rem; color: #FF9900;"></i>
+                    <h4>AWS Certified Machine Learning – Specialty</h4>
+                    <p class="cert-issuer">AWS <span class="cert-year-inline">· 2022</span></p>
+                </div>
+                <!-- 3. Gen AI / LLMs -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-magic cert-badge-icon" style="font-size: 2.2rem; color: #FFD21E;"></i>
+                    <h4>Transformers for NLP</h4>
+                    <p class="cert-issuer">Hugging Face <span class="cert-year-inline">· 2023</span></p>
+                </div>
+                <!-- 4. Deep Learning -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-brain cert-badge-icon" style="font-size: 2.2rem; color: #3b82f6;"></i>
+                    <h4>Deep Learning Specialization</h4>
+                    <p class="cert-issuer">DeepLearning.AI <span class="cert-year-inline">· 2021</span></p>
+                </div>
+                <!-- 5. MLOps -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-server cert-badge-icon" style="font-size: 2.2rem; color: #4285F4;"></i>
+                    <h4>GCP Professional Data Engineer</h4>
+                    <p class="cert-issuer">Google Cloud <span class="cert-year-inline">· 2022</span></p>
+                </div>
+                <!-- 6. Computer Vision -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-eye cert-badge-icon" style="font-size: 2.2rem; color: #EE4C2C;"></i>
+                    <h4>Advanced Computer Vision</h4>
+                    <p class="cert-issuer">PyTorch <span class="cert-year-inline">· 2022</span></p>
+                </div>
+
+                <!-- New Hidden Certifications -->
+                <!-- 7. Agentic AI -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-network-wired cert-badge-icon" style="font-size: 2.2rem; color: #10b981;"></i>
+                    <h4>Agentic AI Systems Engineering</h4>
+                    <p class="cert-issuer">CrewAI / AutoGen <span class="cert-year-inline">· 2024</span></p>
+                </div>
+                <!-- 8. Gen AI Engineering -->
+                <div class="cert-card-v2">
+                    <i class="fas fa-microchip cert-badge-icon" style="font-size: 2.2rem; color: #8b5cf6;"></i>
+                    <h4>Generative AI & LLM Engineering</h4>
+                    <p class="cert-issuer">DeepLearning.AI <span class="cert-year-inline">· 2024</span></p>
+                </div>
+                <!-- 9. LLMOps Specialization -->
+                <div class="cert-card-v2 hidden-cert">
+                    <i class="fas fa-rocket cert-badge-icon" style="font-size: 2.2rem; color: #ec4899;"></i>
+                    <h4>LLMOps Specialization</h4>
+                    <p class="cert-issuer">DeepLearning.AI <span class="cert-year-inline">· 2024</span></p>
+                    <p
+                        style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px; opacity: 0.8; line-height: 1.3;">
+                        Focus: LLM Fine-Tuning, Deployment & Production
+                    </p>
+                </div>
+                <!-- 9. RAG -->
+                <div class="cert-card-v2 hidden-cert">
+                    <i class="fas fa-search-plus cert-badge-icon" style="font-size: 2.2rem; color: #f59e0b;"></i>
+                    <h4>Retrieval-Augmented Generation (RAG)</h4>
+                    <p class="cert-issuer">Pinecone / LangChain <span class="cert-year-inline">· 2024</span></p>
+                </div>
+                <!-- 10. Fine Tuning -->
+                <div class="cert-card-v2 hidden-cert">
+                    <i class="fas fa-sliders-h cert-badge-icon" style="font-size: 2.2rem; color: #ef4444;"></i>
+                    <h4>LLM Fine-Tuning & Optimization</h4>
+                    <p class="cert-issuer">Hugging Face <span class="cert-year-inline">· 2024</span></p>
+                </div>
+                <!-- 11. MLOps -->
+                <div class="cert-card-v2 hidden-cert">
+                    <i class="fas fa-infinity cert-badge-icon" style="font-size: 2.2rem; color: #06b6d4;"></i>
+                    <h4>MLOps for Machine Learning & LLMs</h4>
+                    <p class="cert-issuer">Coursera / Google <span class="cert-year-inline">· 2023</span></p>
+                </div>
+                <div class="cert-view-more-container">
+                    <button class="view-more-btn" onclick="toggleCerts(this)">
+                        View More Credentials <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>ABOUT ME</h3>
+                        <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                            specialize in designing and deploying LLM-driven applications, utilizing machine learning,
+                            deep learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h3>PROFESSIONAL LINKS</h3>
+                        <ul class="footer-links-list">
+                            <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank"><i
+                                        class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="https://github.com/a4rehman" target="_blank"><i class="fab fa-github"></i>
+                                    GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>GET IN TOUCH</h3>
+                        <ul class="footer-links-list">
+                            <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank"><i class="fas fa-envelope"></i>
+                                    Email Me</a></li>
+                            <li><a href="https://wa.me/923460842762" target="_blank"><i class="fab fa-whatsapp"></i>
+                                    WhatsApp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

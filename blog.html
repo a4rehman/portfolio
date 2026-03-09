@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abdul Rehman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("E9IkrYo8s2nqwsS7R");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpeg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <h2 class="page-title"><span class="gradient-text">Articles</span></h2>
+
+        <div class="blog-list">
+
+            <!-- Article 1: Women in Data Science -->
+            <div class="blog-item">
+                <div class="blog-image">
+                    <img src="assets/images/blog_women.jpg" alt="Women in Data Science">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Why aren’t there more women in data science?</h3>
+                    <p class="blog-text">
+                        In this article, I write about the lack of female representation in technology. In my opinion,
+                        girls aren’t naturally less inclined to pursue careers in STEM. Rather, they have been
+                        conditioned from a young age to stay away from the field.
+                        <br><br>
+                        I provide insight on the measures that we as a community can take to ensure that more women
+                        develop an interest in tech-related fields.
+                    </p>
+                    <p class="blog-publication">Publication: Towards Data Science</p>
+                    <button class="blog-btn">Article</button>
+                </div>
+            </div>
+
+            <!-- Article 2: Data for Social Good -->
+            <div class="blog-item reverse">
+                <div class="blog-image">
+                    <img src="assets/images/blog_social.jpg" alt="Data for Social Good">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">How to change the world with data science?</h3>
+                    <p class="blog-text">
+                        Most applications of data science today revolve around maximizing profit for large companies.
+                        However, data science can be used for so much more than just increasing revenue.
+                        <br><br>
+                        In this article, I explain the different ways data can be used for social good.
+                    </p>
+                    <p class="blog-publication">Publication: Towards Data Science</p>
+                    <button class="blog-btn">Article</button>
+                </div>
+            </div>
+
+            <!-- Article 3: Lying with Data -->
+            <div class="blog-item">
+                <div class="blog-image">
+                    <img src="assets/images/blog_lying.jpg" alt="Lying with Data">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">How to lie with data?</h3>
+                    <p class="blog-text">
+                        Data can be used to lie. Statistics can be used to exaggerate, blow incidents out of proportion,
+                        and push political agendas.
+                        <br><br>
+                        In the world we live in today, the consequences of misusing statistics can be disastrous.
+                        Misinformation can spread like wildfire on the Internet, with claims that they are backed up by
+                        scientific proof.
+                        <br><br>
+                        In this article, I explain the different ways statistics can be misused. I provide case studies
+                        on how data has been used to mislead people in the past.
+                        The aim of this article is to inform readers about the dangers of believing a statistic without
+                        doing proper research.
+                    </p>
+                    <button class="blog-btn">Article</button>
+                </div>
+            </div>
+
+            <!-- Article 4: Learning Programming -->
+            <div class="blog-item reverse">
+                <div class="blog-image">
+                    <img src="assets/images/blog_learning.jpg" alt="Learning Programming">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Finding it difficult to learn programming? Here’s why.</h3>
+                    <p class="blog-text">
+                        In the first coding class I took in my life, my lecturer told me that “some people just weren’t
+                        cut out for programming.” I believed her and stopped trying to learn how to code.
+                        <br><br>
+                        I thought that there were two types of people in the world – those who were cut out for
+                        programming (the geniuses), and those who weren’t.
+                        <br><br>
+                        It was only after spending around 8 hours a day programming for a few months that I realized my
+                        lecturer was wrong. I also realized that there were a lot of people just like me, who gave up on
+                        learning to code simply because they thought they weren’t cut out for it. I wrote this article
+                        to clear any misconceptions people might have about learning how to code. The best programmers I
+                        know aren’t geniuses or straight A students. They possess a set of traits that can be built
+                        along the way, which I highlight in this article.
+                    </p>
+                    <button class="blog-btn">Article</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABOUT ME</h3>
+                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                        specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
+                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PROFESSIONAL LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GET IN TOUCH</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email
+                                Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
