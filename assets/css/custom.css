@@ -220,6 +220,7 @@
     justify-content: center;
     position: relative;
     overflow-x: hidden;
+    z-index: 1;
 }
 
 .hero-wrapper-full .about-container {
