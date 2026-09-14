@@ -162,10 +162,10 @@ async function downloadResume(event) {
 
 /**
  * EMAILJS INTEGRATION
- * Public Key: E9IkrYo8s2nqwsS7R
- * Service ID: service_y4r1pxo
- * Contact Template: template_zgz0g1c
- * Visit Template: template_gp8y77k
+ * Public Key: __EMAILJS_PUBLIC_KEY__
+ * Service ID: __EMAILJS_SERVICE_ID__
+ * Contact Template: __EMAILJS_CONTACT_TEMPLATE__
+ * Visit Template: __EMAILJS_VISIT_TEMPLATE__
  */
 
 // 1. Visit Notification (Only once per session)
@@ -178,7 +178,7 @@ async function sendVisitNotification() {
         if (!ipResponse.ok) throw new Error("IP API unreachable");
         const data = await ipResponse.json();
 
-        await emailjs.send("service_y4r1pxo", "template_gp8y77k", {
+        await emailjs.send("__EMAILJS_SERVICE_ID__", "__EMAILJS_VISIT_TEMPLATE__", {
             visitor_ip: data.ip || "Unknown",
             visitor_city: data.city || "Unknown",
             visitor_country: data.country_name || "Unknown",
@@ -210,7 +210,7 @@ if (contactForm) {
 
         try {
             // Send main contact form FIRST so it definitely goes through
-            await emailjs.sendForm("service_y4r1pxo", "template_zgz0g1c", this);
+            await emailjs.sendForm("__EMAILJS_SERVICE_ID__", "__EMAILJS_CONTACT_TEMPLATE__", this);
 
             // Fetch IP data in the background (don't let failure here block the success message)
             try {
@@ -218,7 +218,7 @@ if (contactForm) {
                 const data = await ipData.json();
 
                 // Send secondary tracking notification
-                await emailjs.send("service_y4r1pxo", "template_gp8y77k", {
+                await emailjs.send("__EMAILJS_SERVICE_ID__", "__EMAILJS_VISIT_TEMPLATE__", {
                     visitor_ip: data.ip,
                     visitor_city: data.city,
                     visitor_country: data.country_name,

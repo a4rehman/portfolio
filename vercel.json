@@ -1,0 +1,6 @@
+{
+  "buildCommand": "node ../build.js",
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "trailingSlash": true
+}
