@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps & Downloads | Abdul Rehman</title>
+    <link rel="icon" href="assets/images/profile.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-circle">
+                <img src="assets/images/profile.jpg" alt="AR"
+                    onerror="this.style.display='none'; this.parentElement.innerText='AR'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="apps.html" class="active">Apps</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="assets/docs/resume.pdf" onclick="downloadResume(event); return false;"
+                        download="Abdul_Rehman_AI_Engineer_Resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+
+        <!-- Hero -->
+        <section style="text-align: center; padding: 60px 0 30px;">
+            <h1 class="page-title"><span class="gradient-text">Apps & Downloads</span></h1>
+            <p class="page-subtitle">Open web apps in your browser or download desktop apps to your PC</p>
+        </section>
+
+        <!-- ==================== WEB APPS ==================== -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-globe" style="color: #3b82f6; filter: drop-shadow(0 0 5px rgba(59,130,246,0.5));"></i> WEB APPS — Open in Browser</h2>
+            <div class="grid-container" id="web-apps-grid">
+
+                <!-- house-price-prediction -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-home" style="color:#3b82f6;"></i></div>
+                    <h3>House Price Prediction</h3>
+                    <p>ML-powered house price estimator with FastAPI backend and Streamlit dashboard.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">ML</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://house-price-prediction-ai.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- AI-Tutor-Quiz-Generator -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap" style="color:#8b5cf6;"></i></div>
+                    <h3>AI Tutor Quiz Generator</h3>
+                    <p>AI-powered quiz generator using LLMs for personalized learning.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">LLM</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://ai-tutor-quiz-generator.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Medical-Chatbot-Advanced-RAG -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-heartbeat" style="color:#ef4444;"></i></div>
+                    <h3>Medical Chatbot (RAG)</h3>
+                    <p>Advanced RAG-based medical chatbot for health-related Q&A.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://medical-chatbot-advanced-rag.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- jarvis-ai -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-robot" style="color:#06b6d4;"></i></div>
+                    <h3>Jarvis AI Assistant</h3>
+                    <p>Voice-controlled AI assistant with NLP capabilities.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Voice</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://jarvis-ai.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- computer-vision-defect-detection -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-eye" style="color:#f59e0b;"></i></div>
+                    <h3>Defect Detection (CV)</h3>
+                    <p>Computer vision system for industrial defect detection.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">CNN</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://computer-vision-defect-detection.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- sentiment-analyisis -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-smile" style="color:#10b981;"></i></div>
+                    <h3>Sentiment Analysis</h3>
+                    <p>Real-time sentiment analysis for text and social media.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">BERT</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://sentiment-analyisis.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Human-Posture-detection -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-person" style="color:#ec4899;"></i></div>
+                    <h3>Human Posture Detection</h3>
+                    <p>Real-time human posture detection using pose estimation.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">OpenCV</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://human-posture-detection.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- English-Tutor-AI -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-language" style="color:#8b5cf6;"></i></div>
+                    <h3>English Tutor AI</h3>
+                    <p>AI-powered English language tutor with interactive lessons.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">Education</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://english-tutor-ai.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Metal-vs-Plastic-Classifier -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-recycle" style="color:#22c55e;"></i></div>
+                    <h3>Metal vs Plastic Classifier</h3>
+                    <p>Image classifier for recycling sorting — metal or plastic.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">Transfer Learning</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://metal-vs-plastic-classifier.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- universal_video_downloader -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-download" style="color:#ef4444;"></i></div>
+                    <h3>Universal Video Downloader</h3>
+                    <p>Download videos from YouTube, TikTok, and 1000+ sites.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">yt-dlp</span>
+                        <span class="skill-tag">GUI</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://universal-video-downloader.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- ai_course_genrated -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-book-open" style="color:#f97316;"></i></div>
+                    <h3>AI Course Generator</h3>
+                    <p>Generate complete course outlines and content using AI.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">Education</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://ai-course-genrated.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- chatbot -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-comments" style="color:#06b6d4;"></i></div>
+                    <h3>AI Chatbot</h3>
+                    <p>Conversational AI chatbot with OpenAI integration.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">OpenAI</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://chatbot-ai.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Invisibility-Cloak-Effect -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-mask" style="color:#a855f7;"></i></div>
+                    <h3>Invisibility Cloak Effect</h3>
+                    <p>Real-time invisibility cloak effect using color detection.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">CV</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://invisibility-cloak-effect.streamlit.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== VERCEL APPS ==================== -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-server" style="color:#06b6d4; filter: drop-shadow(0 0 5px rgba(6,182,212,0.5));"></i> VERCEL APPS</h2>
+            <div class="grid-container">
+
+                <!-- EduFinder-PK -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-search" style="color:#06b6d4;"></i></div>
+                    <h3>EduFinder PK</h3>
+                    <p>Find the best schools and universities across Pakistan.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vercel</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://edu-finder-pk.vercel.app" target="_blank" class="cta-button primary">Open App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- portfolio -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-briefcase" style="color:#8b5cf6;"></i></div>
+                    <h3>Portfolio Website</h3>
+                    <p>Personal portfolio showcasing projects and expertise.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                    <div style="margin-top:15px;">
+                        <a href="https://abdulrehman-portfolio.vercel.app" target="_blank" class="cta-button primary">Open Site <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== DESKTOP APPS ==================== -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-desktop" style="color:#f59e0b; filter: drop-shadow(0 0 5px rgba(245,158,11,0.5));"></i> DESKTOP APPS — Download & Install</h2>
+            <div class="grid-container">
+
+                <!-- py-desktop-suite -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-layer-group" style="color:#f59e0b;"></i></div>
+                    <h3>Python Desktop Suite</h3>
+                    <p>4-in-1 desktop app: Calculator, ATM Simulator, News Hub, and Shopping Store. Built with CustomTkinter.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">CustomTkinter</span>
+                        <span class="skill-tag">Desktop</span>
+                    </div>
+                    <div style="margin-top:15px; display:flex; gap:10px; flex-wrap:wrap;">
+                        <a href="https://github.com/a4rehman/py-desktop-suite/releases/latest" target="_blank" class="cta-button primary"><i class="fas fa-download"></i> Download .exe</a>
+                        <a href="https://github.com/a4rehman/py-desktop-suite" target="_blank" class="cta-button secondary"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+
+                <!-- nova-ai-assistant -->
+                <div class="content-card">
+                    <div class="card-icon"><i class="fas fa-microphone" style="color:#06b6d4;"></i></div>
+                    <h3>Nova AI Assistant</h3>
+                    <p>Voice-controlled desktop AI assistant with speech recognition and text-to-speech.</p>
+                    <div class="tech-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">CustomTkinter</span>
+                        <span class="skill-tag">Voice AI</span>
+                    </div>
+                    <div style="margin-top:15px; display:flex; gap:10px; flex-wrap:wrap;">
+                        <a href="https://github.com/a4rehman/nova-ai-assistant/releases/latest" target="_blank" class="cta-button primary"><i class="fas fa-download"></i> Download .exe</a>
+                        <a href="https://github.com/a4rehman/nova-ai-assistant" target="_blank" class="cta-button secondary"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== RUN LOCALLY ==================== -->
+        <section class="project-category-section">
+            <h2 class="category-title"><i class="fas fa-terminal" style="color:#10b981; filter: drop-shadow(0 0 5px rgba(16,185,129,0.5));"></i> RUN LOCALLY — Clone & Run</h2>
+            <div class="grid-container">
+
+                <div class="content-card" style="grid-column: 1 / -1;">
+                    <div class="card-icon"><i class="fas fa-code" style="color:#10b981;"></i></div>
+                    <h3>Run Any Project Locally</h3>
+                    <p>Clone any repo and run it on your machine.</p>
+                    <div style="background:#0d1117; border-radius:10px; padding:20px; margin-top:15px; font-family:'Fira Code',monospace; font-size:13px; overflow-x:auto;">
+                        <pre style="color:#e6edf3; margin:0; white-space:pre-wrap;"><span style="color:#8b949e;"># Clone any project</span>
+<span style="color:#79c0ff;">git clone</span> https://github.com/a4rehman/<span style="color:#ffa657;">REPO_NAME</span>.git
+<span style="color:#79c0ff;">cd</span> <span style="color:#ffa657;">REPO_NAME</span>
+
+<span style="color:#8b949e;"># Install dependencies</span>
+<span style="color:#79c0ff;">pip install</span> -r requirements.txt
+
+<span style="color:#8b949e;"># Run the app</span>
+<span style="color:#79c0ff;">streamlit run</span> app.py
+<span style="color:#8b949e;"># or</span>
+<span style="color:#79c0ff;">python</span> main.py</pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- All Repositories -->
+        <section class="project-category-section" style="padding-bottom: 80px;">
+            <h2 class="category-title"><i class="fab fa-github" style="color:#f8fafc;"></i> ALL REPOSITORIES</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:15px;">
+                <a href="https://github.com/a4rehman?tab=repositories" target="_blank" class="cta-button primary" style="font-size:15px;"><i class="fab fa-github"></i> View All 57 Repos on GitHub</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding:30px; border-top:1px solid var(--border-color); color:var(--text-secondary); font-size:13px;">
+        <p>&copy; 2026 Abdul Rehman. Built with Python &amp; passion.</p>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
