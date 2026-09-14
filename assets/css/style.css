@@ -62,6 +62,31 @@ a {
     transition: var(--transition);
 }
 
+/* Accessibility: Focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    z-index: 10000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -561,7 +586,7 @@ ul {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        /* Todo: mobile menu */
+        /* Mobile nav handled by JS + CSS class */
     }
 
     .nav-toggle {

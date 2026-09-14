@@ -13,18 +13,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-if (navToggle) {
+if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.right = '20px';
-            navLinks.style.background = 'var(--bg-navy)';
-            navLinks.style.padding = '20px';
-            navLinks.style.borderRadius = '10px';
-            navLinks.style.border = '1px solid #333';
+        navLinks.classList.toggle('active');
+        // Toggle icon
+        const icon = navToggle.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
         }
     });
 }
