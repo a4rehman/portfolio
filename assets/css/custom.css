@@ -584,6 +584,208 @@
     color: inherit;
 }
 
+/* ========== ANIMATED ICONS ========== */
+@keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes icon-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.85; }
+}
+
+@keyframes icon-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes icon-glow {
+    0%, 100% { filter: drop-shadow(0 0 4px currentColor); }
+    50% { filter: drop-shadow(0 0 12px currentColor); }
+}
+
+@keyframes icon-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-3px) rotate(2deg); }
+    75% { transform: translateY(2px) rotate(-2deg); }
+}
+
+@keyframes icon-shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    75% { transform: rotate(8deg); }
+}
+
+@keyframes icon-ping {
+    0% { transform: scale(1); opacity: 1; }
+    75%, 100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes gradient-icon {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Base animated icon */
+.animated-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-icon i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Pulse ring behind icon */
+.animated-icon::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.animated-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    opacity: 0;
+    animation: icon-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.content-card:hover .animated-icon::before {
+    opacity: 0.2;
+}
+
+.content-card:hover .animated-icon::after {
+    opacity: 0.15;
+}
+
+.content-card:hover .animated-icon {
+    transform: translateY(-3px) scale(1.08);
+}
+
+/* === COLOR VARIANTS === */
+
+/* Blue - Data Science */
+.animated-icon.icon-blue {
+    background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+    color: #2563EB;
+}
+.animated-icon.icon-blue::before { background: #2563EB; }
+.animated-icon.icon-blue::after { background: #2563EB; }
+.content-card:hover .animated-icon.icon-blue { box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25); }
+
+/* Purple - AI/ML */
+.animated-icon.icon-purple {
+    background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+    color: #7C3AED;
+}
+.animated-icon.icon-purple::before { background: #7C3AED; }
+.animated-icon.icon-purple::after { background: #7C3AED; }
+.content-card:hover .animated-icon.icon-purple { box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25); }
+
+/* Green - Web/Tools */
+.animated-icon.icon-green {
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    color: #059669;
+}
+.animated-icon.icon-green::before { background: #059669; }
+.animated-icon.icon-green::after { background: #059669; }
+.content-card:hover .animated-icon.icon-green { box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25); }
+
+/* Orange - CV/Detection */
+.animated-icon.icon-orange {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    color: #D97706;
+}
+.animated-icon.icon-orange::before { background: #D97706; }
+.animated-icon.icon-orange::after { background: #D97706; }
+.content-card:hover .animated-icon.icon-orange { box-shadow: 0 8px 24px rgba(217, 119, 6, 0.25); }
+
+/* Red - Safety/Medical */
+.animated-icon.icon-red {
+    background: linear-gradient(135deg, #FEE2E2, #FECACA);
+    color: #DC2626;
+}
+.animated-icon.icon-red::before { background: #DC2626; }
+.animated-icon.icon-red::after { background: #DC2626; }
+.content-card:hover .animated-icon.icon-red { box-shadow: 0 8px 24px rgba(220, 38, 38, 0.25); }
+
+/* Cyan - NLP */
+.animated-icon.icon-cyan {
+    background: linear-gradient(135deg, #CFFAFE, #A5F3FC);
+    color: #0891B2;
+}
+.animated-icon.icon-cyan::before { background: #0891B2; }
+.animated-icon.icon-cyan::after { background: #0891B2; }
+.content-card:hover .animated-icon.icon-cyan { box-shadow: 0 8px 24px rgba(8, 145, 178, 0.25); }
+
+/* Pink - Creative */
+.animated-icon.icon-pink {
+    background: linear-gradient(135deg, #FCE7F3, #FBCFE8);
+    color: #DB2777;
+}
+.animated-icon.icon-pink::before { background: #DB2777; }
+.animated-icon.icon-pink::after { background: #DB2777; }
+.content-card:hover .animated-icon.icon-pink { box-shadow: 0 8px 24px rgba(219, 39, 119, 0.25); }
+
+/* Teal - Automation */
+.animated-icon.icon-teal {
+    background: linear-gradient(135deg, #CCFBF1, #99F6E4);
+    color: #0D9488;
+}
+.animated-icon.icon-teal::before { background: #0D9488; }
+.animated-icon.icon-teal::after { background: #0D9488; }
+.content-card:hover .animated-icon.icon-teal { box-shadow: 0 8px 24px rgba(13, 148, 136, 0.25); }
+
+/* Indigo - Deep Learning */
+.animated-icon.icon-indigo {
+    background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+    color: #4F46E5;
+}
+.animated-icon.icon-indigo::before { background: #4F46E5; }
+.animated-icon.icon-indigo::after { background: #4F46E5; }
+.content-card:hover .animated-icon.icon-indigo { box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25); }
+
+/* Animation types on hover */
+.content-card:hover .animated-icon.anim-bounce i {
+    animation: icon-bounce 0.6s ease infinite;
+}
+
+.content-card:hover .animated-icon.anim-pulse i {
+    animation: icon-pulse 0.8s ease infinite;
+}
+
+.content-card:hover .animated-icon.anim-spin i {
+    animation: icon-spin 1.5s linear infinite;
+}
+
+.content-card:hover .animated-icon.anim-glow i {
+    animation: icon-glow 1.2s ease infinite;
+}
+
+.content-card:hover .animated-icon.anim-float i {
+    animation: icon-float 2s ease infinite;
+}
+
+.content-card:hover .animated-icon.anim-shake i {
+    animation: icon-shake 0.5s ease infinite;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
     .expertise-grid,
