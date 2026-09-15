@@ -613,3 +613,411 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   IMPACT METRICS SECTION
+   ============================================ */
+.impact-section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.impact-item {
+    padding: 40px 32px;
+    border-right: 1px solid var(--border);
+    text-align: left;
+}
+
+.impact-item:last-child {
+    border-right: none;
+}
+
+.impact-number {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cobalt);
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -0.03em;
+}
+
+.impact-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+}
+
+.impact-detail {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .impact-item:nth-child(2) {
+        border-right: none;
+    }
+    .impact-item:nth-child(1),
+    .impact-item:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 600px) {
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    .impact-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .impact-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ============================================
+   WHAT I BUILD SECTION
+   ============================================ */
+.capabilities-section {
+    padding: 100px 0;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.capability-card {
+    padding: 36px 28px;
+    border-right: 1px solid var(--border);
+    background: var(--bg-white);
+    transition: var(--transition);
+}
+
+.capability-card:last-child {
+    border-right: none;
+}
+
+.capability-card:hover {
+    background: var(--bg-subtle);
+}
+
+.capability-number {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--cobalt);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+}
+
+.capability-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.capability-list {
+    list-style: none;
+    padding: 0;
+}
+
+.capability-list li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.capability-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 992px) {
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .capability-card:nth-child(2) {
+        border-right: none;
+    }
+    .capability-card:nth-child(1),
+    .capability-card:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 600px) {
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+    .capability-card {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .capability-card:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ============================================
+   CASE STUDY SECTION
+   ============================================ */
+.case-study-section {
+    padding: 100px 0;
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.case-study-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+.case-study-step {
+    padding: 40px 28px;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid var(--border);
+}
+
+.case-study-step:last-child {
+    border-right: none;
+}
+
+.case-step-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--cobalt);
+    margin-bottom: 16px;
+}
+
+.case-step-icon {
+    font-size: 1.8rem;
+    color: var(--cobalt);
+    margin-bottom: 16px;
+}
+
+.case-step-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.case-step-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.case-arrow {
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cobalt);
+    font-size: 1rem;
+    z-index: 1;
+    background: var(--bg-subtle);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 992px) {
+    .case-study-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .case-study-step:nth-child(2) {
+        border-right: none;
+    }
+    .case-study-step:nth-child(1),
+    .case-study-step:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+    .case-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .case-study-flow {
+        grid-template-columns: 1fr;
+    }
+    .case-study-step {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .case-study-step:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ============================================
+   ALTERNATING PROJECTS
+   ============================================ */
+.project-editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-editorial.reverse {
+    direction: rtl;
+}
+
+.project-editorial.reverse > * {
+    direction: ltr;
+}
+
+.project-editorial-image {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 16/10;
+    background: var(--bg-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-editorial-content {
+    padding: 20px 0;
+}
+
+.project-editorial-number {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--cobalt);
+    margin-bottom: 12px;
+}
+
+.project-editorial-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.project-editorial-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.project-editorial-meta {
+    margin-bottom: 24px;
+}
+
+.project-editorial-meta h4 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.project-editorial-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-editorial-tags .skill-tag {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    background: var(--cobalt-light);
+    color: var(--cobalt);
+    border: 1px solid rgba(36, 87, 214, 0.12);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.project-editorial-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-editorial-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cobalt);
+    transition: var(--transition);
+}
+
+.project-editorial-links a:hover {
+    color: var(--cobalt-dark);
+}
+
+.project-editorial-links a i {
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+}
+
+.project-editorial-links a:hover i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .project-editorial {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 0;
+    }
+    .project-editorial.reverse {
+        direction: ltr;
+    }
+    .project-editorial-title {
+        font-size: 1.4rem;
+    }
+}

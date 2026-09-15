@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* ============================================
-   SWISS EDITORIAL DESIGN SYSTEM
+   PRECISION AI DESIGN SYSTEM
    ============================================ */
 :root {
     /* === SURFACES === */
-    --bg-primary: #F7F7F5;
+    --bg-primary: #F8FAFC;
     --bg-white: #FFFFFF;
-    --bg-subtle: #F1F2F4;
+    --bg-subtle: #F1F5F9;
     --bg-card: #FFFFFF;
-    --bg-card-hover: #FAFAFA;
+    --bg-card-hover: #FAFCFF;
 
     /* === BRAND === */
-    --cobalt: #1746D1;
-    --cobalt-dark: #1237A6;
-    --cobalt-light: #EEF4FF;
+    --cobalt: #2457D6;
+    --cobalt-dark: #183FA8;
+    --cobalt-light: #EAF1FF;
+
+    /* === NAVY === */
+    --navy: #0F1F3D;
 
     /* === TEXT === */
-    --text-primary: #111111;
-    --text-secondary: #4B5563;
-    --text-muted: #6B7280;
-    --text-label: #9CA3AF;
+    --text-primary: #0B1220;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --text-label: #94A3B8;
 
     /* === STATUS === */
     --success: #15803D;
     --error: #B91C1C;
 
     /* === BORDERS === */
-    --border: #E5E7EB;
-    --border-light: #F3F4F6;
+    --border: #D9E1EC;
+    --border-light: #E8EDF3;
 
     /* === TYPOGRAPHY === */
     --font-heading: 'Space Grotesk', sans-serif;
