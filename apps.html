@@ -16,30 +16,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .filter-bar { display:flex; flex-wrap:wrap; gap:8px; margin:30px 0; justify-content:center; }
-        .filter-btn { padding:8px 18px; border-radius:20px; border:1px solid var(--border-color); background:transparent; color:var(--text-secondary); cursor:pointer; font-size:13px; font-family:var(--font-main); transition:var(--transition); }
-        .filter-btn:hover, .filter-btn.active { background:var(--primary-color); color:#fff; border-color:var(--primary-color); }
-        .search-box { width:100%; max-width:500px; margin:0 auto 10px; padding:12px 20px; border-radius:12px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:15px; font-family:var(--font-main); outline:none; }
-        .search-box:focus { border-color:var(--primary-color); box-shadow:0 0 0 3px rgba(139,92,246,0.15); }
-        .search-box::placeholder { color:var(--text-secondary); }
-        .card-badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; margin-bottom:8px; }
-        .badge-live { background:rgba(16,185,129,0.15); color:#10b981; }
-        .badge-desktop { background:rgba(245,158,11,0.15); color:#f59e0b; }
-        .badge-source { background:rgba(59,130,246,0.15); color:#3b82f6; }
-        .badge-course { background:rgba(139,92,246,0.15); color:#8b5cf6; }
-        .badge-website { background:rgba(236,72,153,0.15); color:#ec4899; }
-        .card-buttons { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
-        .cta-button.sm { padding:8px 16px; font-size:12px; }
-        .project-count { text-align:center; color:var(--text-secondary); font-size:14px; margin-bottom:10px; }
-    </style>
+
 </head>
 
-<body>\n    <a href="#main-content" class="skip-link">Skip to main content</a>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container navbar-container">
+        <div class="navbar-container">
             <div class="logo-circle">
                 <img src="assets/images/profile.jpg" alt="AR"
                     onerror="this.style.display='none'; this.parentElement.innerText='AR'">
@@ -60,7 +45,7 @@
     <div class="page-wrapper container" id="main-content">
 
         <!-- Hero -->
-        <section style="text-align:center; padding:60px 0 10px;">
+        <section class="page-header">
             <h1 class="page-title"><span class="gradient-text">All Projects</span></h1>
             <p class="page-subtitle">Open in browser, download to desktop, or clone & run locally</p>
         </section>
@@ -679,16 +664,47 @@
         </div><!-- /grid -->
 
         <!-- GitHub Link -->
-        <section style="text-align:center; padding:40px 0 80px;">
-            <a href="https://github.com/a4rehman?tab=repositories" target="_blank" rel="noopener noreferrer" class="cta-button primary" style="font-size:15px;"><i class="fab fa-github"></i> View All on GitHub</a>
+        <section class="page-header">
+            <a href="https://github.com/a4rehman?tab=repositories" target="_blank" rel="noopener noreferrer" class="cta-button primary"><i class="fab fa-github"></i> View All on GitHub</a>
         </section>
 
     </div>
 
     <!-- Footer -->
-    <footer style="text-align:center; padding:30px; border-top:1px solid var(--border-color); color:var(--text-secondary); font-size:13px;">
-        <p>&copy; 2026 Abdul Rehman. Built with Python &amp; passion.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ABOUT ME</h3>
+                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                        specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
+                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PROFESSIONAL LINKS</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GET IN TOUCH</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email
+                                Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Abdul Rehman. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Mobile nav toggle

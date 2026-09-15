@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>\n    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Navbar -->
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <nav class="navbar">
-        <div class="container navbar-container">
+        <div class="navbar-container">
             <div class="logo-circle">
                 <img src="assets/images/profile.jpg" alt="AR"
                     onerror="this.style.display='none'; this.parentElement.innerText='AR'">
@@ -33,29 +34,28 @@
         </div>
     </nav>
 
-    <div class="page-wrapper" style="display: flex; align-items: center; justify-content: center; min-height: 80vh; text-align: center;">
+    <div class="page-wrapper" id="main-content" style="display: flex; align-items: center; justify-content: center; min-height: 80vh; text-align: center;">
         <div>
             <h1 class="gradient-text" style="font-size: 8rem; font-weight: 800; margin-bottom: 10px; line-height: 1;">404</h1>
-            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: white;">Page Not Found</h2>
-            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px; max-width: 500px;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-primary);">Page Not Found</h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto;">
                 The page you're looking for doesn't exist or has been moved.
             </p>
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
                 <a href="index.html" class="btn btn-primary">
-                    <i class="fas fa-home" style="margin-right: 8px;"></i> Back Home
+                    <i class="fas fa-home"></i> Back Home
                 </a>
-                <a href="projects.html" class="btn" style="border: 1px solid var(--border-color); color: var(--text-primary);">
-                    <i class="fas fa-folder-open" style="margin-right: 8px;"></i> View Projects
+                <a href="projects.html" class="btn btn-outline">
+                    <i class="fas fa-folder-open"></i> View Projects
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2026 Abdul Rehman. All rights reserved.
+                <p>&copy; 2026 Abdul Rehman. All rights reserved.</p>
             </div>
         </div>
     </footer>

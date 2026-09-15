@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=__GA_MEASUREMENT_ID__"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -28,26 +27,24 @@
         gtag('js', new Date());
         gtag('config', '__GA_MEASUREMENT_ID__');
     </script>
-    <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            // Replace with your actual Public Key from EmailJS
             emailjs.init("__EMAILJS_PUBLIC_KEY__");
         })();
     </script>
 </head>
 
-<body>\n    <a href="#main-content" class="skip-link">Skip to main content</a>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container navbar-container">
+        <div class="navbar-container">
             <div class="logo-circle">
                 <img src="assets/images/profile.jpg" alt="AR"
                     onerror="this.style.display='none'; this.parentElement.innerText='AR'">
             </div>
-
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -58,32 +55,28 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
             <div class="nav-toggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <div class="hero-wrapper-full" id="main-content">
-
-        <!-- Hero / Professional Summary Section -->
-        <div class="about-container" style="align-items: flex-start; margin-bottom: 100px; padding-top: 40px;">
-            <div class="about-image" style="flex: 0 0 250px;">
+        <div class="about-container">
+            <div class="about-image">
                 <div class="hero-profile-img">
                     <img src="assets/images/profile.jpg" alt="Abdul Rehman">
                 </div>
             </div>
-            <div class="about-text" style="max-width: 800px; flex: 1;">
+            <div class="about-text">
                 <h1 class="hero-name">Abdul Rehman</h1>
-                <h2 class="hero-title"><span class="gradient-text">AI Engineer | LLM &
-                        Agentic Systems</span></h2>
+                <h2 class="hero-title"><span class="gradient-text">AI Engineer | LLM & Agentic Systems</span></h2>
 
                 <p class="hero-description">
                     An AI Engineer with <strong>1+ year of experience</strong> delivering AI-driven, scalable
                     solutions across domains such as retail, telecom, real estate, and healthcare. I apply advanced
-                    <strong>Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Generative
-                        AI, Time Series Forecasting, and MLOps</strong> to solve real-world business problems.
+                    <strong>Machine Learning, Deep Learning, Computer Vision, NLP, Generative AI, Time Series Forecasting, and MLOps</strong> to solve real-world business problems.
                 </p>
 
                 <p class="hero-description">
@@ -92,82 +85,81 @@
                     models such as <strong>Gemma, LLaMA, and Qwen</strong> for the <strong>Arabic language</strong>.
                 </p>
 
-                <div style="margin-top: 30px;">
-                    <p class="hero-impact-label">Selected Impact</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li class="hero-impact-item">
-                            <span class="hero-impact-dot">⬤</span>
-                            <span><strong>Increased churn recall from 24% to 87%</strong> across 150+ branches while
-                                maintaining <strong>zero production incidents</strong>.</span>
-                        </li>
-                        <li class="hero-impact-item">
-                            <span class="hero-impact-dot">⬤</span>
-                            <span><strong>Saved PKR 5M annually</strong> for Faysal Bank by reducing ATM cash
-                                shortages by <strong>90%</strong> via Prophet-based optimization.</span>
-                        </li>
-                        <li class="hero-impact-item">
-                            <span class="hero-impact-dot">⬤</span>
-                            <span><strong>Reduced excess cash holdings by 40%</strong>, boosting allocation efficiency
-                                and maintaining a <strong>30% minimum cash availability</strong> nationwide.</span>
-                        </li>
-                        <li class="hero-impact-item">
-                            <span class="hero-impact-dot">⬤</span>
-                            <span><strong>Enhanced model performance by 25%</strong> through error analysis, improved
-                                data quality, and hyperparameter tuning.</span>
-                        </li>
-                    </ul>
-                </div>
+                <div class="hero-impact-label">Selected Impact</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="hero-impact-item">
+                        <span class="hero-impact-dot">&#9679;</span>
+                        <span><strong>Increased churn recall from 24% to 87%</strong> across 150+ branches while
+                            maintaining <strong>zero production incidents</strong>.</span>
+                    </li>
+                    <li class="hero-impact-item">
+                        <span class="hero-impact-dot">&#9679;</span>
+                        <span><strong>Saved PKR 5M annually</strong> for Faysal Bank by reducing ATM cash
+                            shortages by <strong>90%</strong> via Prophet-based optimization.</span>
+                    </li>
+                    <li class="hero-impact-item">
+                        <span class="hero-impact-dot">&#9679;</span>
+                        <span><strong>Reduced excess cash holdings by 40%</strong>, boosting allocation efficiency
+                            and maintaining a <strong>30% minimum cash availability</strong> nationwide.</span>
+                    </li>
+                    <li class="hero-impact-item">
+                        <span class="hero-impact-dot">&#9679;</span>
+                        <span><strong>Enhanced model performance by 25%</strong> through error analysis, improved
+                            data quality, and hyperparameter tuning.</span>
+                    </li>
+                </ul>
 
-                <!-- Stats -->
                 <div class="hero-stats">
                     <div>
-                        <h3 class="gradient-text hero-stat-number"><span
-                                class="counter" data-target="1">0</span>+</h3>
+                        <h3 class="gradient-text hero-stat-number"><span class="counter" data-target="1">0</span>+</h3>
                         <p class="hero-stat-label">Years Exp</p>
                     </div>
                     <div>
-                        <h3 class="gradient-text hero-stat-number"><span
-                                class="counter" data-target="60">0</span>+</h3>
+                        <h3 class="gradient-text hero-stat-number"><span class="counter" data-target="60">0</span>+</h3>
                         <p class="hero-stat-label">Projects</p>
                     </div>
                     <div>
-                        <h3 class="gradient-text hero-stat-number">PKR
-                            <span class="counter" data-target="5">0</span>M
-                        </h3>
+                        <h3 class="gradient-text hero-stat-number">PKR <span class="counter" data-target="5">0</span>M</h3>
                         <p class="hero-stat-label">Annual Savings</p>
                     </div>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://github.com/a4rehman" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:a4rehman.ai@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="page-wrapper">
         <div class="container">
 
             <!-- Experience Section -->
             <h2 class="page-title section-heading"><span class="gradient-text">Professional Experience</span></h2>
-            <p class="page-subtitle" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 10px;">
-                Professional roles focused on scalable, real-world solutions
-            </p>
+            <p class="page-subtitle">Professional roles focused on scalable, real-world solutions</p>
 
             <div class="experience-grid">
-
-                <!-- 100Solutionz Experience -->
                 <div class="experience-item">
                     <div class="job-header">
-                        <div class="job-info-with-logo" style="width: 100%;">
+                        <div class="job-info-with-logo">
                             <img src="assets/images/100Solutionz_logo.png" alt="100Solutionz" class="company-logo-img">
-                            <div style="flex: 1;">
+                            <div>
                                 <div class="job-title">Data Scientist (Internship)</div>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div class="company-name">100Solutionz, Lahore, Pakistan</div>
-                                    <div class="job-date">Aug 2025 - Present</div>
-                                </div>
+                                <div class="company-name">100Solutionz, Lahore</div>
                             </div>
                         </div>
+                        <div class="job-date">Aug 2025 - Present</div>
                     </div>
                     <ul class="job-achievements">
-                        <li>Applying Machine Learning and Natural Language Processing (NLP) techniques to solve complex
-                            data challenges.</li>
+                        <li>Applying Machine Learning and NLP techniques to solve complex data challenges.</li>
                         <li>Collaborating with cross-functional teams to design and implement AI-driven solutions.</li>
                     </ul>
                     <div class="tech-stack-chips">
@@ -177,30 +169,23 @@
                     </div>
                 </div>
 
-                <!-- Fiverr/Upwork Experience -->
                 <div class="experience-item">
                     <div class="job-header">
-                        <div class="job-info-with-logo" style="width: 100%;">
-                            <div style="display: flex; gap: 10px; align-items: center; margin-right: 15px;">
-                                <img src="assets/images/fiverr_logo.png" alt="Fiverr" class="company-logo-img"
-                                    style="margin: 0;">
-                                <img src="assets/images/upwork_logo.png" alt="Upwork" class="company-logo-img"
-                                    style="margin: 0;">
+                        <div class="job-info-with-logo">
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <img src="assets/images/fiverr_logo.png" alt="Fiverr" class="company-logo-img">
+                                <img src="assets/images/upwork_logo.png" alt="Upwork" class="company-logo-img">
                             </div>
-                            <div style="flex: 1;">
-                                <div class="job-title">Artificial Intelligence Engineer | Data Scientist</div>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div class="company-name">Fiverr / Upwork (Freelance)</div>
-                                    <div class="job-date">Feb 2025 - Present</div>
-                                </div>
+                            <div>
+                                <div class="job-title">AI Engineer | Data Scientist</div>
+                                <div class="company-name">Fiverr / Upwork (Freelance)</div>
                             </div>
                         </div>
+                        <div class="job-date">Feb 2025 - Present</div>
                     </div>
                     <ul class="job-achievements">
-                        <li>Top Rated Seller on Fiverr, delivering high-quality AI and Data Science solutions globally.
-                        </li>
-                        <li>Provided services in diverse domains across over 40 countries, focusing on LLM
-                            implementation and data analysis.</li>
+                        <li>Top Rated Seller on Fiverr, delivering high-quality AI and Data Science solutions globally.</li>
+                        <li>Provided services in diverse domains across over 40 countries, focusing on LLM implementation and data analysis.</li>
                     </ul>
                     <div class="tech-stack-chips">
                         <span class="tech-chip">Generative AI</span>
@@ -208,60 +193,42 @@
                         <span class="tech-chip">Data Analysis</span>
                     </div>
                 </div>
-
             </div>
 
             <!-- Achievements Section -->
             <h2 class="page-title section-heading"><span class="gradient-text">Achievements</span></h2>
             <p class="page-subtitle">Recognitions & Awards</p>
 
-            <div class="grid-container"
-                style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px;">
-                <!-- Achievement 1 -->
-                <div class="content-card"
-                    style="padding: 40px 30px; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: 20px;">
-                        <i class="fas fa-trophy"
-                            style="color: #f59e0b; filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.4));"></i>
+            <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="content-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div class="card-icon" style="margin-bottom: 16px;">
+                        <i class="fas fa-trophy" style="color: #f59e0b; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4));"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; line-height: 1.5; margin-bottom: 0;"><strong>2nd Position</strong> in
-                        SastaTicket Hackathon</h3>
+                    <h3 style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 0;"><strong>2nd Position</strong> in SastaTicket Hackathon</h3>
                 </div>
 
-                <!-- Achievement 2 -->
-                <div class="content-card"
-                    style="padding: 40px 30px; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: 20px;">
-                        <i class="fas fa-award"
-                            style="color: #10b981; filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.4));"></i>
+                <div class="content-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div class="card-icon" style="margin-bottom: 16px;">
+                        <i class="fas fa-award" style="color: #10b981; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; line-height: 1.5; margin-bottom: 0;">Won <strong>Rising Talent
-                            Award</strong></h3>
+                    <h3 style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 0;">Won <strong>Rising Talent Award</strong></h3>
                 </div>
 
-                <!-- Achievement 3 -->
-                <div class="content-card"
-                    style="padding: 40px 30px; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: 20px;">
-                        <i class="fas fa-medal"
-                            style="color: #3b82f6; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));"></i>
+                <div class="content-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div class="card-icon" style="margin-bottom: 16px;">
+                        <i class="fas fa-medal" style="color: #3b82f6; filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; line-height: 1.5; margin-bottom: 0;"><strong>2x Monthly
-                            Awards</strong> &
-                        <strong>1x Quarterly Award</strong> Achieved
-                    </h3>
+                    <h3 style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 0;"><strong>2x Monthly Awards</strong> & <strong>1x Quarterly Award</strong></h3>
                 </div>
             </div>
-
 
             <!-- Education Section -->
             <h2 class="page-title section-heading-sm"><span class="gradient-text">Education</span></h2>
             <p class="page-subtitle">Academic background</p>
 
             <div class="education-resume-container">
-                <!-- Education Entry 1 -->
                 <div class="education-resume-item">
-                    <div class="edu-main-info">
+                    <div>
                         <div class="edu-degree">BS Computer Science</div>
                         <div class="edu-university">Bahauddin Zakariya University (BZU)</div>
                         <div class="edu-cgpa">Grade: B</div>
@@ -277,32 +244,28 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>ABOUT ME</h3>
-                    <p>An AI Engineer with a Passion for Building Agentic Systems and Solving Real-World Problems. I
+                    <h3>About Me</h3>
+                    <p>An AI Engineer with a passion for building Agentic Systems and solving real-world problems. I
                         specialize in designing and deploying LLM-driven applications, utilizing machine learning, deep
-                        learning, and natural language processing (NLP) to create intelligent solutions.</p>
+                        learning, and NLP to create intelligent solutions.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>PROFESSIONAL LINKS</h3>
+                    <h3>Professional Links</h3>
                     <ul class="footer-links-list">
-                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://github.com/a4rehman" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>
-                                GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/abdul-rehman-ai001" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/a4rehman" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>GET IN TOUCH</h3>
+                    <h3>Get In Touch</h3>
                     <ul class="footer-links-list">
-                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email
-                                Me</a></li>
-                        <li><a href="https://wa.me/923460842762" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i>
-                                WhatsApp</a></li>
+                        <li><a href="mailto:a4rehman.ai@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email Me</a></li>
+                        <li><a href="https://wa.me/923460842762" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Abdul Rehman. All rights reserved.
+                <p>&copy; 2026 Abdul Rehman. All rights reserved.</p>
             </div>
         </div>
     </footer>
