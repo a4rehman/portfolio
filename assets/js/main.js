@@ -9,6 +9,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+    }, { passive: true });
+}
+
+// Hero entrance animation
+const heroEntrance = document.querySelector('.hero-entrance');
+if (!heroEntrance) {
+    const heroWrapper = document.querySelector('.hero-wrapper-full');
+    if (heroWrapper) heroWrapper.classList.add('hero-entrance');
+}
+
 // Simple mobile menu toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -271,3 +293,60 @@ if (contactForm) {
 
 // Initialize on load
 window.addEventListener('load', sendVisitNotification);
+
+// ============================================
+// SCROLL REVEAL ANIMATIONS
+// ============================================
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+});
+
+// Observe all reveal elements
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    revealObserver.observe(el);
+});
+
+// Auto-add reveal class to sections for animation
+function initScrollAnimations() {
+    const sections = document.querySelectorAll(
+        '.impact-section, .capabilities-section, .case-study-section, ' +
+        '.project-category-section, .project-editorial, ' +
+        '.experience-grid, .cert-grid, .skills-grid, ' +
+        '.contact-info-grid, .education-resume-container, ' +
+        '.blog-grid, .blog-list, .footer'
+    );
+
+    sections.forEach(section => {
+        if (!section.classList.contains('reveal') && !section.querySelector('.reveal')) {
+            section.classList.add('reveal');
+            revealObserver.observe(section);
+        }
+    });
+
+    // Stagger children in grids
+    const grids = document.querySelectorAll('.impact-grid, .capabilities-grid, .case-study-flow, .grid-container');
+    grids.forEach(grid => {
+        grid.classList.add('stagger-children');
+        grid.querySelectorAll(':scope > *').forEach(child => {
+            if (!child.classList.contains('reveal')) {
+                child.classList.add('reveal');
+                revealObserver.observe(child);
+            }
+        });
+    });
+}
+
+// Run on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+    initScrollAnimations();
+}
