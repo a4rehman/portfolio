@@ -58,16 +58,16 @@
 
         <!-- Filters -->
         <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All (47)</button>
-            <button class="filter-btn" data-filter="live">Live Apps (15)</button>
-            <button class="filter-btn" data-filter="desktop">Desktop (2)</button>
-            <button class="filter-btn" data-filter="ai-ml">AI/ML (22)</button>
-            <button class="filter-btn" data-filter="course">Courses (8)</button>
-            <button class="filter-btn" data-filter="website">Websites (6)</button>
-            <button class="filter-btn" data-filter="tool">Tools (11)</button>
+            <button class="filter-btn active" data-filter="all">All (39)</button>
+            <button class="filter-btn" data-filter="live">Live Apps (23)</button>
+            <button class="filter-btn" data-filter="desktop">Desktop (1)</button>
+            <button class="filter-btn" data-filter="ai-ml">AI/ML (21)</button>
+            <button class="filter-btn" data-filter="course">Courses (6)</button>
+            <button class="filter-btn" data-filter="website">Websites (4)</button>
+            <button class="filter-btn" data-filter="tool">Tools (9)</button>
         </div>
 
-        <p class="project-count" id="projectCount">Showing 47 of 47 projects</p>
+        <p class="project-count" id="projectCount">Showing 39 of 39 projects</p>
 
         <!-- ==================== ALL PROJECTS GRID ==================== -->
         <div class="grid-container" id="projectsGrid">
@@ -709,11 +709,6 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        // Mobile nav toggle
-        document.querySelector('.nav-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
         // Filter
         document.querySelectorAll('.filter-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {

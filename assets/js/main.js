@@ -213,6 +213,12 @@ async function downloadResume(event) {
 // 1. Visit Notification (Only once per session)
 async function sendVisitNotification() {
     try {
+        const serviceId = "__EMAILJS_SERVICE_ID__";
+        const templateId = "__EMAILJS_VISIT_TEMPLATE__";
+
+        // Only run if real EmailJS service credentials are configured and not placeholders
+        if (!serviceId || serviceId.startsWith('__') || typeof emailjs === 'undefined') return;
+
         // Stop if already notified in this session
         if (sessionStorage.getItem('visit_notified')) return;
 
@@ -220,7 +226,7 @@ async function sendVisitNotification() {
         if (!ipResponse.ok) throw new Error("IP API unreachable");
         const data = await ipResponse.json();
 
-        await emailjs.send("__EMAILJS_SERVICE_ID__", "__EMAILJS_VISIT_TEMPLATE__", {
+        await emailjs.send(serviceId, templateId, {
             visitor_ip: data.ip || "Unknown",
             visitor_city: data.city || "Unknown",
             visitor_country: data.country_name || "Unknown",
@@ -232,7 +238,7 @@ async function sendVisitNotification() {
         sessionStorage.setItem('visit_notified', 'true');
 
     } catch (e) {
-        console.error('Tracking system error:', e);
+        console.warn('Visitor tracking skipped:', e.message || e);
     }
 }
 
