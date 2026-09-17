@@ -106,54 +106,6 @@
     font-weight: 500;
 }
 
-/* Project Link Buttons */
-.project-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid var(--border);
-    width: 100%;
-}
-
-.project-link-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition);
-    border: 1px solid transparent;
-}
-
-.project-link-btn.live {
-    background: var(--cobalt);
-    color: white;
-}
-
-.project-link-btn.live:hover {
-    background: var(--cobalt-dark);
-    transform: translateY(-1px);
-}
-
-.project-link-btn.code {
-    background: transparent;
-    color: var(--text-secondary);
-    border-color: var(--border);
-}
-
-.project-link-btn.code:hover {
-    background: var(--bg-subtle);
-    border-color: var(--text-muted);
-}
-
-.project-link-btn i {
-    font-size: 0.82rem;
-}
-
 /* ========== EXPERTISE PAGE ========== */
 .expertise-grid,
 .skills-grid,
@@ -823,14 +775,6 @@
         width: 100%;
     }
 
-    .project-links {
-        flex-direction: column;
-    }
-
-    .project-link-btn {
-        justify-content: center;
-    }
-
     .education-resume-item {
         flex-direction: column;
         gap: 12px;
@@ -1325,35 +1269,6 @@
     color: white;
     border-color: var(--cobalt);
     transform: translateY(-1px);
-}
-
-.project-editorial-links {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.project-editorial-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--cobalt);
-    transition: all 0.3s ease;
-}
-
-.project-editorial-links a:hover {
-    color: var(--cobalt-dark);
-}
-
-.project-editorial-links a i {
-    font-size: 0.8rem;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.project-editorial-links a:hover i {
-    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
