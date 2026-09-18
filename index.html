@@ -25,12 +25,17 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '__GA_MEASUREMENT_ID__');
+        if (!"__GA_MEASUREMENT_ID__".startsWith('__')) {
+            gtag('config', '__GA_MEASUREMENT_ID__');
+        }
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("__EMAILJS_PUBLIC_KEY__");
+            var publicKey = "__EMAILJS_PUBLIC_KEY__";
+            if (window.emailjs && publicKey && !publicKey.startsWith('__')) {
+                emailjs.init(publicKey);
+            }
         })();
     </script>
 </head>
@@ -96,6 +101,7 @@
                 <div class="hero-profile-img">
                     <img src="assets/images/profile.jpg" alt="Abdul Rehman">
                 </div>
+                <span class="hero-signature" aria-hidden="true">Abdul Rehman</span>
             </div>
         </div>
     </div>

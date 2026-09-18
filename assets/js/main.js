@@ -245,54 +245,111 @@ async function sendVisitNotification() {
 // 2. Contact Form Handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+    const nameInput = contactForm.querySelector('[name="user_name"]');
+    const emailInput = contactForm.querySelector('[name="user_email"]');
+    const messageInput = contactForm.querySelector('[name="message"]');
+    const status = document.getElementById('form-status');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const inputs = [nameInput, emailInput, messageInput].filter(Boolean);
+
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function setStatus(message, type) {
+        if (!status) return;
+        status.textContent = message;
+        status.className = 'form-status' + (type ? ' ' + type : '');
+    }
+
+    function validateField(field) {
+        const value = (field.value || '').trim();
+        const group = field.closest('.form-group');
+        let valid = true;
+
+        if (field.name === 'user_name') {
+            valid = value.length >= 2;
+        } else if (field.name === 'user_email') {
+            valid = EMAIL_RE.test(value);
+        } else if (field.name === 'message') {
+            valid = value.length >= 10;
+        }
+
+        if (group) group.classList.toggle('invalid', !valid);
+        return valid;
+    }
+
+    // Live validation feedback
+    inputs.forEach(field => {
+        field.addEventListener('input', () => {
+            const group = field.closest('.form-group');
+            if (group) group.classList.remove('invalid');
+            if (status && status.className === 'form-status error') setStatus('');
+        });
+        field.addEventListener('blur', () => validateField(field));
+    });
+
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const status = document.getElementById('form-status');
-        const btn = contactForm.querySelector('button');
+        setStatus('');
 
-        if (status) {
-            status.style.display = 'block';
-            status.innerHTML = '<span style="color: #38bdf8;">Sending...</span>';
+        // Validate every field before submitting
+        let firstInvalid = null;
+        inputs.forEach(field => {
+            const valid = validateField(field);
+            if (!valid && !firstInvalid) firstInvalid = field;
+        });
+
+        if (firstInvalid) {
+            setStatus('Please correct the highlighted fields and try again.', 'error');
+            firstInvalid.focus();
+            return;
         }
-        btn.disabled = true;
+
+        // Only send if EmailJS service credentials are configured (build-time placeholders)
+        const serviceId = "__EMAILJS_SERVICE_ID__";
+        const templateId = "__EMAILJS_CONTACT_TEMPLATE__";
+        const configured = serviceId && !serviceId.startsWith('__') &&
+            templateId && !templateId.startsWith('__') &&
+            typeof emailjs !== 'undefined';
+
+        if (!configured) {
+            setStatus('The contact service is not connected yet. Please email me directly at a4rehman.ai@gmail.com.', 'error');
+            return;
+        }
+
+        if (submitBtn) submitBtn.disabled = true;
+        setStatus('Sending your message...', 'sending');
 
         try {
-            // Send main contact form FIRST so it definitely goes through
-            await emailjs.sendForm("__EMAILJS_SERVICE_ID__", "__EMAILJS_CONTACT_TEMPLATE__", this);
+            // Send the message first so it definitely goes through
+            await emailjs.sendForm(serviceId, templateId, contactForm);
 
-            // Fetch IP data in the background (don't let failure here block the success message)
+            // Fetch IP data in the background (failure here never blocks the success message)
             try {
                 const ipData = await fetch("https://ipapi.co/json/");
                 const data = await ipData.json();
 
-                // Send secondary tracking notification
                 await emailjs.send("__EMAILJS_SERVICE_ID__", "__EMAILJS_VISIT_TEMPLATE__", {
                     visitor_ip: data.ip,
                     visitor_city: data.city,
                     visitor_country: data.country_name,
-                    visitor_name: contactForm.querySelector('[name="user_name"]').value
+                    visitor_name: nameInput ? nameInput.value.trim() : ''
                 });
             } catch (ipErr) {
-                console.warn("IP Tracking failed, but message was sent.", ipErr);
+                console.warn("IP tracking failed, but the message was sent.", ipErr);
             }
 
-            if (status) {
-                status.innerHTML = '<span style="color: #10b981;">Message sent successfully!</span>';
-            } else {
-                alert("Message Sent Successfully");
-            }
+            setStatus('Message sent successfully! I\u2019ll get back to you within 24 hours.', 'success');
             contactForm.reset();
+            inputs.forEach(field => {
+                const group = field.closest('.form-group');
+                if (group) group.classList.remove('invalid');
+            });
         } catch (err) {
             console.error("EmailJS Error details:", err);
-            if (status) {
-                const errorMsg = err.text || err.message || "Please check your EmailJS dashboard settings.";
-                status.innerHTML = `<span style="color: #ef4444;">Error: ${errorMsg}</span>`;
-            }
+            const detail = (err && (err.text || err.message)) || 'Something went wrong. Please try again.';
+            setStatus('Failed to send your message. ' + detail, 'error');
         } finally {
-            btn.disabled = false;
-            if (status) {
-                setTimeout(() => { status.style.display = 'none'; }, 5000);
-            }
+            if (submitBtn) submitBtn.disabled = false;
         }
     });
 }

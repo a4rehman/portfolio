@@ -22,13 +22,18 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '__GA_MEASUREMENT_ID__');
+        if (!"__GA_MEASUREMENT_ID__".startsWith('__')) {
+            gtag('config', '__GA_MEASUREMENT_ID__');
+        }
     </script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("__EMAILJS_PUBLIC_KEY__"); // Replace with your Public Key
+            var publicKey = "__EMAILJS_PUBLIC_KEY__";
+            if (window.emailjs && publicKey && !publicKey.startsWith('__')) {
+                emailjs.init(publicKey);
+            }
         })();
     </script>
 </head>
@@ -94,28 +99,31 @@
         <div class="section-label" style="text-align: center;">08 / Contact</div>
         <div class="content-card">
             <h3>Send a <span class="gradient-text">Message</span></h3>
-            <form id="contact-form" class="custom-form" aria-label="Contact form">
+            <form id="contact-form" class="custom-form" aria-label="Contact form" novalidate>
                 <div class="contact-form-grid">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="user_name" placeholder="John Doe" required
-                            aria-required="true">
+                            aria-required="true" autocomplete="name" aria-describedby="name-error">
+                        <small class="form-error" id="name-error">Please enter your full name.</small>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="user_email" placeholder="john@example.com" required
-                            aria-required="true">
+                            aria-required="true" autocomplete="email" aria-describedby="email-error">
+                        <small class="form-error" id="email-error">Please enter a valid email address.</small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required
-                        aria-required="true"></textarea>
+                        aria-required="true" aria-describedby="message-error"></textarea>
+                    <small class="form-error" id="message-error">Please enter a message of at least 10 characters.</small>
                 </div>
                 <button type="submit" class="view-more-btn">
                     Send Message <i class="fas fa-paper-plane"></i>
                 </button>
-                <div id="form-status" role="alert" aria-live="polite"></div>
+                <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
             </form>
         </div>
     </div>
